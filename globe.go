@@ -183,7 +183,7 @@ func (g *Globe) DrawCountryBoundaries(style ...Option) {
 	g.drawPreparedPaths(countries, style...)
 }
 
-func (g *Globe) drawPreparedPaths(paths [][]struct{ lat, lng float32 }, style ...Option) {
+func (g *Globe) DrawPreparedPaths(paths [][]struct{ lat, lng float32 }, style ...Option) {
 	defer g.styled(Color(g.style.LineColor), style...)()
 	for _, path := range paths {
 		n := len(path)
